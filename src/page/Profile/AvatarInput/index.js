@@ -12,15 +12,13 @@ export default function AvatarInput() {
 
   const ref = useRef();
 
-  useEffect(() => {
-    if (ref.current) {
-      registerField({
-        name: 'avatar_id',
-        ref: ref.current,
-        path: 'dataset.file',
-      });
-    }
-  }, [ref, registerField]);
+  // useEffect(() => {
+  //   registerField({
+  //     name: 'avatar_id',
+  //     ref: ref.current,
+  //     path: 'dataset.file',
+  //   });
+  // }, [registerField, ref]);
 
   async function handleChange(e) {
     const data = new FormData();
@@ -42,7 +40,7 @@ export default function AvatarInput() {
             preview
             || 'https://api.adorable.io/avatars/50/abott@adorable.pngCopy'
           }
-          alt=""
+          alt="avatar"
         />
         <input
           type="file"
